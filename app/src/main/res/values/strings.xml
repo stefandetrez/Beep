@@ -27,10 +27,10 @@
     <string name="parse_client_key">yZ8NrZvFoFHyErPbm7KAX91uXX1ggHHm5MDScpng</string>-->
 
     <!--Backendless-->
-    <string name="backendless_app_id">1C9AB22A-D442-4D0C-FFB6-403D71FBA800</string>
-    <string name="backendless_secret_key">DDCC204E-A921-127D-FFFC-B3EAF04B9000</string>
+    <string name="backendless_app_id">D7E13C87-A197-F544-FF09-64C81F1C7400</string>
+    <string name="backendless_secret_key">9E24136D-CC2D-1DE6-FFDC-096655CA9A00</string>
 
-    <string name="google_project_number">143096327367</string>
+    <string name="google_project_number">983071014993</string>
 
     <!--BugSense-->
     <string name="bug_sense_key"></string>
