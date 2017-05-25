@@ -44,6 +44,9 @@ import org.apache.commons.lang3.StringUtils;
 import timber.log.Timber;
 
 import com.google.android.gms.ads.MobileAds;
+import com.google.android.gms.ads.InterstitialAd;
+import com.google.android.gms.ads.AdRequest;
+import com.google.android.gms.ads.AdListener;
 
 public class ChatSDKMainActivity extends ChatSDKBaseActivity {
 
@@ -63,6 +66,8 @@ public class ChatSDKMainActivity extends ChatSDKBaseActivity {
     private int pageAdapterPos = -1;
 
     private OpenFromPushChecker mOpenFromPushChecker;
+
+    private InterstitialAd mInterstitialAd;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -99,6 +104,22 @@ public class ChatSDKMainActivity extends ChatSDKBaseActivity {
         // Mobile Ads configuration
         // Sample AdMob app ID: ca-app-pub-3940256099942544~3347511713
         MobileAds.initialize(this, "ca-app-pub-3940256099942544~3347511713");
+
+
+
+        mInterstitialAd = new InterstitialAd(this);
+        mInterstitialAd.setAdUnitId("ca-app-pub-3940256099942544/1033173712");
+        mInterstitialAd.loadAd(new AdRequest.Builder().build());
+
+        mInterstitialAd.setAdListener(new AdListener() {
+            @Override
+            public void onAdClosed() {
+                // Load the next interstitial.
+                mInterstitialAd.loadAd(new AdRequest.Builder().build());
+            }
+
+        });
+
     }
 
     @Override
@@ -129,6 +150,13 @@ public class ChatSDKMainActivity extends ChatSDKBaseActivity {
                         pageAdapterPos = position;
 
                         lastPage = position;
+
+                        // Add the AdMob functionality here
+                        if (mInterstitialAd.isLoaded()) {
+                            mInterstitialAd.show();
+                        } else {
+                            //Log.d("TAG", "The interstitial wasn't loaded yet.");
+                        }
                     }
 
                     @Override
