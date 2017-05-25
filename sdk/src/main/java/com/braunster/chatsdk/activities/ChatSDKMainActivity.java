@@ -43,6 +43,7 @@ import org.apache.commons.lang3.StringUtils;
 
 import timber.log.Timber;
 
+import com.google.android.gms.ads.MobileAds;
 
 public class ChatSDKMainActivity extends ChatSDKBaseActivity {
 
@@ -62,7 +63,7 @@ public class ChatSDKMainActivity extends ChatSDKBaseActivity {
     private int pageAdapterPos = -1;
 
     private OpenFromPushChecker mOpenFromPushChecker;
-    
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -95,6 +96,9 @@ public class ChatSDKMainActivity extends ChatSDKBaseActivity {
             return;
         }
 
+        // Mobile Ads configuration
+        // Sample AdMob app ID: ca-app-pub-3940256099942544~3347511713
+        MobileAds.initialize(this, "ca-app-pub-3940256099942544~3347511713");
     }
 
     @Override
@@ -140,7 +144,6 @@ public class ChatSDKMainActivity extends ChatSDKBaseActivity {
                 registerReceiver(mainReceiver, intentFilter);
             }
         });
-
     }
 
     @Override

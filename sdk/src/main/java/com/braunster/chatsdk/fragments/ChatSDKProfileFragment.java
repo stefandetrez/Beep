@@ -30,7 +30,6 @@ import com.braunster.chatsdk.object.SaveIndexDetailsTextWatcher;
  */
 public class ChatSDKProfileFragment extends ChatSDKAbstractProfileFragment {
 
-
     private static final String TAG = ChatSDKProfileFragment.class.getSimpleName();
     private static boolean DEBUG = Debug.ProfileFragment;
 
@@ -148,6 +147,8 @@ public class ChatSDKProfileFragment extends ChatSDKAbstractProfileFragment {
         BNetworkManager.sharedManager().getNetworkAdapter().logout();
         chatSDKUiHelper.startLoginActivity(true);
     }
+
+
 
     /*############################################*/
     /* UI*/

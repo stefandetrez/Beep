@@ -71,6 +71,12 @@ public class ChatSDKBaseThreadActivity extends ChatSDKBaseActivity {
     }
 
     @Override
+    protected void onResume() {
+        super.onResume();
+
+    }
+
+    @Override
     protected void onNewIntent(Intent intent) {
         super.onNewIntent(intent);
         getDataFromBundle(intent.getExtras());

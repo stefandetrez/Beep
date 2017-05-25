@@ -81,8 +81,6 @@ public class ChatSDKBaseActivity extends Activity implements ChatSDKBaseActivity
 
     protected ChatSDKUiHelper chatSDKUiHelper;
 
-
-
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
