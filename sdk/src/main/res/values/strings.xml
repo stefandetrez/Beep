@@ -56,7 +56,7 @@
     <string name="thread_details_activity_change_name_dialog_title">Set thread name</string>
 
     <!--Message list adapter-->
-    <string name="message_adapter_no_google_maps">This device does not have google maps</string>
+    <string name="message_adapter_no_google_maps">This device does not have Google Maps</string>
     <string name="message_adapter_load_image_fail">Can\'t show image</string>
 
     <!-- Login Activity-->
@@ -73,7 +73,7 @@
     <string name="delete_thread_success_toast">Thread is deleted</string>
 
     <!--ChatSDKAbstractChatActivity-->
-    <string name="chat_activity_no_more_messages_to_load_toast">There is no new messages to load&#8230;</string>
+    <string name="chat_activity_no_more_messages_to_load_toast">There are no new messages to load&#8230;</string>
     <string name="chat_activity_add_item_text">Add contact to chat</string>
     <string name="chat_activity_show_users_item_text">Show thread users</string>
     <string name="chat_activity_show_thread_details">Thread Details</string>
@@ -147,7 +147,7 @@
     <string name="action_logout">Logout</string>
     <string name="action_contact_developer">Contact Developer</string>
     <string name="action_add_chat">Add Chat</string>
-    <string name="done_show_again">Done show again</string>
+    <string name="done_show_again">Do not show again</string>
     <string name="double_back_press_exit">Use double back button pressed to exit</string>
 
     <!--Notification-->
